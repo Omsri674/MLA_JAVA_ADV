@@ -41,10 +41,10 @@ ul {
 			src="https://eswartherapeutics.com/wp-content/uploads/2024/06/QuickFinXpert-1.png"
 			alt="hello">
 		<ul style="display: flex;">
-			<li>Home</li>
-			<li>About</li>
-			<li>Services</li>
-			<li>Team</li>
+			<li><a href="#">Home</a></li>
+			<li><a href="CS.jsp">About</a></li>
+			<li><a href="CS.jsp">Services</a></li>
+			<li><a href="CS.jsp">Team</a></li>
 			
 		</ul>
 		
