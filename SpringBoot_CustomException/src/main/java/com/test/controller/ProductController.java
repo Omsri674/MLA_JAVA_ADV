@@ -38,14 +38,14 @@ public class ProductController {
 	public ResponseEntity<Product> createProduct(@RequestBody Product p) {
 		Product prObj = service.createProd(p);
 		
-		return new ResponseEntity<>(prObj,HttpStatus.OK);
+		return new ResponseEntity<>(prObj,HttpStatus.BAD_REQUEST);
 	}
 	
 	@GetMapping("/readAll")
 	public ResponseEntity<List<Product>> readAll() {
 		List<Product> prObj = service.readAll();
 		
-		return new ResponseEntity<>(prObj,HttpStatus.OK);
+		return new ResponseEntity<>(prObj,HttpStatus.BAD_REQUEST);
 	}
 	
 	@PutMapping("update/{id}")
@@ -54,7 +54,7 @@ public class ProductController {
 		p.setId(id);
 		List<Product> prObj = service.update(p);
 		
-		return new ResponseEntity<>(prObj,HttpStatus.OK);
+		return new ResponseEntity<>(prObj,HttpStatus.BAD_REQUEST);
 	}
 	
 	@DeleteMapping("delete/{id}")
@@ -62,7 +62,7 @@ public class ProductController {
 		
 List<Product> prObj = service.deleteProd(id);
 		
-		return new ResponseEntity<>(prObj,HttpStatus.OK);
+		return new ResponseEntity<>(prObj,HttpStatus.BAD_REQUEST);
 	}
 	
 }

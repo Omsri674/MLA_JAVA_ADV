@@ -17,7 +17,7 @@ public class GlobalExceptionHandler {
 	
 		ErrorMessage errorMsg = new ErrorMessage();
 		
-		int statusCode = HttpStatus.NOT_FOUND.value();
+		int statusCode = HttpStatus.BAD_REQUEST.value();
 		
 		String desc = request.getDescription(false);
 		
@@ -26,7 +26,7 @@ public class GlobalExceptionHandler {
 		errorMsg.setStatusCode(statusCode);
 		errorMsg.setMsg(err.getMessage());
 		
-		return new ResponseEntity<>(errorMsg,HttpStatus.NOT_FOUND) ;
+		return new ResponseEntity<>(errorMsg,HttpStatus.BAD_REQUEST) ;
 		
 	}
 	
@@ -36,7 +36,7 @@ public class GlobalExceptionHandler {
 	
 		ErrorMessage errorMsg = new ErrorMessage();
 		
-		int statusCode = HttpStatus.NO_CONTENT.value();
+		int statusCode = HttpStatus.BAD_REQUEST.value();
 		
 		String desc = request.getDescription(false);
 		
@@ -45,7 +45,7 @@ public class GlobalExceptionHandler {
 		errorMsg.setStatusCode(statusCode);
 		errorMsg.setMsg(e.getMessage());
 		
-		return new ResponseEntity<>(errorMsg,HttpStatus.NO_CONTENT) ;
+		return new ResponseEntity<>(errorMsg,HttpStatus.BAD_REQUEST) ;
 		
 	}
 	
